@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Facebook Messenger AI Chatbot",
+  "version": "1.0",
+  "description": "A Chrome extension that reads Facebook Messenger messages and suggests AI-generated replies.",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "https://www.messenger.com/*",
+    "https://www.facebook.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.messenger.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "type": "module"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "hello_extensions.png",
+      "48": "hello_extensions.png",
+      "128": "hello_extensions.png"
+    }
+  }
+}

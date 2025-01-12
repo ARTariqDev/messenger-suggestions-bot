@@ -1,0 +1,17 @@
+{
+  "name": "messenger-chatbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "curl": "^0.1.4",
+    "dotenv": "^16.4.7",
+    "openai": "^4.78.1"
+  }
+}
